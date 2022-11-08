@@ -1,12 +1,13 @@
-image: alpine/edge
-oauth: pages.sr.ht/PAGES:RW
+image: alpine/latest
 packages:
-- hut
+  - hugo
+oauth: pages.sr.ht/PAGES:RW
 environment:
-  site: www.oguz.lol
+  site: oguz.lol
 tasks:
 - package: |
     cd $site
-    tar -cvz . > ../site.tar.gz
+    hugo
+    tar -C public -cvz . > ../site.tar.gz
 - upload: |
-    hut pages publish -d $site site.tar.gz
+    acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz
