@@ -1,0 +1,52 @@
+baseURL: "https://oguz.lol/"
+languageCode: en-uk
+title: ~oguz
+theme: WonderMod
+
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  showtoc: true
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    disableHLJS: true
+
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: Things are going to happen here at some point!
+
+
+  socialIcons:
+    - name: email
+      url: "mailto:"
+    - name: mastodon
+      url: "https://social.lol/@oguz"
+    - name: sourcehut
+      url: "https://sr.ht/~hooz/"
+    - name: Profile
+      url: "https://oguz.omg.lol"
+
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    style: monokai
